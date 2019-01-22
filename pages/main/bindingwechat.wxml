@@ -1,0 +1,19 @@
+<view class='space_height_two_view'></view>
+<view class="parent">
+
+  <view class='content'>
+    <text class='title_text'>服务协议</text>
+    <text class='introduce_text'>{{introduce}}</text>
+
+    <view class='content_panel_view' bindtap='userProtocolClick'>
+       <image class='content_panel_view_img' src='{{imgurl}}'></image>
+       <text class='content_panel_view_text'>我已经阅读并同意《服务协议》</text>
+    </view>
+
+  </view>
+
+  <view class='footer_view'>
+    <button class='button' hover-class='btn_hover' disabled="{{buttondisabled}}" open-type="getUserInfo" bindgetuserinfo='onGetUserInfo'>绑定微信</button>
+  </view>
+
+</view>

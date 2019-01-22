@@ -1,0 +1,71 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+
+  <!-- <view class='header'>
+    <i-tabs current="{{current}}" color="#8087f5" bindchange="handleChange">
+      <i-tab key="1" title="未消费"></i-tab>
+      <i-tab key="2" title="已消费"></i-tab>
+    </i-tabs>
+  </view> -->
+
+  <view class='content'>
+    <!--未预约-->
+    <view wx:if="{{current==1}}">
+      <view wx:for="{{data}}">
+        <view class='content_item_view' data-index='{{index}}' bindtap='itemClick'>
+          <view class='content_item_view_left_view'>
+            <image class='content_item_view_left_view_img' src='{{item.list_icon_img_url}}'></image>
+          </view>
+          <view class='content_item_view_center_view'>
+            <text class='content_item_view_center_view_title_text'>{{item.name}}</text>
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>金额：</text>
+              <text class='content_item_view_center_view_view_price_text'>¥{{item.price}}</text>
+            </view>
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>购买时间：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.finish_time}}</text>
+            </view>
+          </view>
+          <!-- <view class='content_item_view_right_view' style='background: #a5a9f2;'>
+            <image class='content_item_view_right_view_img' src='../resources/white_go.png'></image>
+          </view> -->
+        </view>
+      </view>
+    </view>
+
+    <!--已预约-->
+    <view wx:elif="{{current==2}}">
+      <view wx:for="{{data}}">
+        <view class='content_item_view'>
+          <view class='content_item_view_left_view'>
+            <image class='content_item_view_left_view_img' src='{{item.list_icon_img_url}}'></image>
+
+          </view>
+          <view class='content_item_view_center_view'>
+            <text class='content_item_view_center_view_title_text'>{{item.name}}</text>
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>金额：</text>
+              <text class='content_item_view_center_view_view_price_text'>¥{{item.price}}</text>
+            </view>
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>购买时间：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.finish_time}}</text>
+            </view>
+          </view>
+          <view class='content_item_view_right_view' style='background: #a5a9f2;'>
+            <text class='content_item_view_right_view_text'>已\n消\n费</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+
+
+  </view>
+
+  <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+</view>

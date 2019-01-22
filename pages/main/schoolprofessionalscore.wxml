@@ -1,0 +1,23 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view class='header_view'>
+    <text class='header_view_text'>日期</text>
+    <text class='header_view_text'>最高分</text>
+    <text class='header_view_text'>最低分</text>
+    <text class='header_view_text'>批次</text>
+  </view>
+
+  <view class='content_view'>
+    <view wx:for="{{data}}">
+      <view class='content_view_view'>
+        <text class='content_view_view_text'>{{item.year}}</text>
+        <text class='content_view_view_text'>{{item.top_score}}</text>
+        <text class='content_view_view_text'>{{item.average_score}}</text>
+        <text class='content_view_view_text'>{{item.batch}}</text>
+      </view>
+    </view>
+  </view>
+
+
+</view>

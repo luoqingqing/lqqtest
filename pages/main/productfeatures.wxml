@@ -1,0 +1,15 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+  <text class='text'>本产品以中国高中生家庭为服务对象
+承担家长顾问与学生导师双重服务角色
+以测评了解现状
+以讲座更新资讯
+以工作坊提升能力
+以咨询解决问题
+助力家长高效的参与学生的生涯规划
+指导学生个性准确的成就完美人生！</text>
+  <view class='tip_view'>
+    <view class='tip_view_view'></view>
+    <text class='tip_view_text'>权威</text>
+  </view>
+</view>

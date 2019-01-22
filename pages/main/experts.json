@@ -1,0 +1,12 @@
+{
+  "usingComponents": {
+    "i-tabs": "../dist/tabs/index",
+    "i-tab": "../dist/tab/index"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "专家库",
+  "navigationBarTextStyle": "black",
+  "onReachBottomDistance": 60,
+  "enablePullDownRefresh": true
+}

@@ -1,0 +1,114 @@
+<view class='space_height_two_view'></view>
+<scroll-view scroll-y="false">
+  <view class='sc_view_one'>
+
+    <view class='sc_view_head'>
+
+      <view class='sc_view_two'>
+
+        <image class='sc_img_one' src='{{avatarUrl}}' bindtap='headPortraitClick' />
+        <view class='sc_view_three'>
+
+          <view class='svc_header'>
+            <text class='sc_text_white_one'>{{name}}</text>
+            <!-- <text class='sc_text_white_two' style=' margin-left: 40rpx;'></text> -->
+          </view>
+          <text class='sc_text_white_two' wx:if='{{purchaseNum==0}}'>游客</text>
+          <text class='sc_text_white_two' wx:else>会员</text>
+        </view>
+      </view>
+      <view class='space_view' />
+
+
+      <view class='sc_view_four'>
+
+        <!-- <view class='sc_view_five' bindtap='collectionClick'>
+          <text class='sc_text_one'>{{collectionNum}}</text>
+          <text class='sc_text_three'>我的收藏</text>
+        </view> -->
+
+        <!-- <view class='sc_view_six' /> -->
+
+        <view class='sc_view_five' bindtap='appointmentClick'>
+          <text class='sc_text_one'>{{appointmentNum}}</text>
+          <text class='sc_text_three'>我的预约</text>
+        </view>
+
+        <view class='sc_view_six' />
+
+        <view class='sc_view_five' bindtap='purchaseClick'>
+          <text class='sc_text_one'>{{purchaseNum}}</text>
+          <text class='sc_text_three'>我的购买</text>
+        </view>
+
+        <view class='sc_view_six' />
+
+        <view class='sc_view_five' bindtap='evaluationClick'>
+          <text class='sc_text_one'>{{evaluationNum}}</text>
+          <text class='sc_text_three'>我的测评</text>
+        </view>
+
+
+
+      </view>
+
+    </view>
+
+    <view class='bg_view' />
+
+    <view class='sc_view_content'>
+
+      <view class='svc_one' bindtap='membershipUpgradeClick'>
+        <image class='main' src='../resources/vip.png'></image>
+        <text class='sc_text_two'>会员权限</text>
+        <image class='sc_img_two' src='../resources/more.png' />
+      </view>
+
+      <view class='space_view' />
+
+      <view class='svc_one' bindtap='bindingPhoneNumClick'>
+        <image class='main' src='../resources/phone.png'></image>
+        <text class='sc_text_two'>绑定手机号</text>
+        <view class='svc_two'>
+          <text class='sc_text_two'>{{bindedPhoneNum}}</text>
+          <image class='sc_img_two' src='../resources/more.png' />
+        </view>
+      </view>
+
+      <view class='space_view' />
+
+      <view class='svc_one' bindtap='headPortraitClick'>
+        <image class='main' src='../resources/message.png'></image>
+        <text class='sc_text_two'>完善个人信息</text>
+        <image class='sc_img_two' src='../resources/more.png' />
+      </view>
+
+      <view class='space_view' />
+
+      <view class='svc_one' bindtap='systemNotificationClick'>
+        <image class='main' src='../resources/notice.png'></image>
+        <text class='sc_text_two'>系统通知</text>
+        <image class='sc_img_two' src='../resources/more.png' />
+      </view>
+
+      <view class='bg_view' />
+
+      <view class='svc_one' bindtap='contactCustomerServiceClick'>
+        <image class='main' src='../resources/tell.png'></image>
+        <text class='sc_text_two'>联系客服</text>
+        <image class='sc_img_two' src='../resources/more.png' />
+      </view>
+
+      <view class='space_view' />
+
+      <view class='svc_one' bindtap='aboutUsClick'>
+        <image class='main' src='../resources/aboutus.png'></image>
+        <text class='sc_text_two'>关于我们</text>
+        <image class='sc_img_two' src='../resources/more.png' />
+      </view>
+
+    </view>
+
+  </view>
+
+</scroll-view>

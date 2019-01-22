@@ -1,0 +1,8 @@
+{
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "系统通知",
+  "navigationBarTextStyle": "black",
+  "onReachBottomDistance": 60,
+  "enablePullDownRefresh": true
+}

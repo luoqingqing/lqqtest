@@ -1,0 +1,8 @@
+{
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "高校资讯",
+  "navigationBarTextStyle": "black",
+  "onReachBottomDistance": 60,
+  "enablePullDownRefresh": true
+}

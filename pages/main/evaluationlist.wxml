@@ -1,0 +1,25 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view class='content'>
+    <view wx:for="{{data}}">
+      <view class='content_item_view' data-index='{{index}}' bindtap='itemClick'>
+
+        <view class='item_left_view '>
+          <text class='item_view_text '>{{item.name}}</text>
+          <view class='space_view '></view>
+          <text class='content_view_text '>{{item.intro}}</text>
+        </view>
+
+        <view class='item_right_view ' style='background: {{item.color}};'>
+          <text class='item_view_tip_text' wx:if='{{item.available==0}}'>无\n权\n限</text>
+          <image class='item_view_img' src='../resources/white_go.png' wx:else></image>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+</view>

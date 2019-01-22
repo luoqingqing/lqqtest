@@ -1,0 +1,43 @@
+<view class='space_height_two_view'></view>
+<scroll-view>
+  <view class='parent'>
+
+    <!-- <view class='header_view'>
+      <text class='header_view_tip_text'>账号：</text>
+      <text class='header_view_text'>{{account}}</text>
+    </view> -->
+
+    <text class='tip_text'>真实姓名：</text>
+    <input class='input' bindinput='getRealName' type='text' confirm-type='done' placeholder='请输入您的真实姓名' value='{{realName}}'></input>
+
+    <text class='tip_text'>性别：</text>
+    <picker class='picker' bindchange="bindSexChange" value="{{sex}}" range="{{array}}">
+      <view class='picker_view'>
+        <text class='picker_text'>{{sex}}</text>
+         <image class='picker_img' src='../resources/more.png' />
+      </view>
+    </picker>
+
+    <text class='tip_text'>出生日期：</text>
+    <picker class='picker' mode="date" value="{{birthdaydate}}" start="1950-01-01" end="2019-01-01" bindchange="bindDateChange">
+      <view class='picker_view'>
+        <text class='picker_text'>{{birthdaydate}}</text>
+         <image class='picker_img' src='../resources/more.png' />
+      </view>
+    </picker>
+
+    <text class='tip_text'>学生所在学校区域：</text>
+    <picker class='picker' mode="region" value="{{region}}" bindchange="bindRegionChange">
+      <view class='picker_view'>
+        <text class='picker_text'>{{region}}</text>
+         <image class='picker_img' src='../resources/more.png' />
+      </view>
+    </picker>
+
+    <text class='tip_text'>学生所在学校名称：</text>
+    <input class='input' bindinput='getSchoolName' type='text' confirm-type='done' placeholder='请输入您孩子的所在学校名称' value='{{schoolName}}'></input>
+
+
+    <button class='button' hover-class='btn_hover' bindtap='submit'>提 交</button>
+  </view>
+</scroll-view>

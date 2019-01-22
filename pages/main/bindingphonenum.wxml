@@ -1,0 +1,16 @@
+<view class='space_height_two_view'></view>
+<scroll-view>
+  <view class='parent'>
+
+    <view class='verifying_code_view'>
+      <input class='phone_num_input' bindinput='getPhoneNum' type='number' confirm-type='done' placeholder='请输入手机号码' maxlength='11'></input>
+
+      <text class='verifying_code_view_text' hover-class='btn_hover' bindtap='getVerifyingCodeClick'>{{verifying_code_prompt}}</text>
+
+    </view>
+
+    <input class='verifying_code_input' bindinput='getVerifyingCode' type='number' confirm-type='done' placeholder='请输入验证码' maxlength='6'></input>
+
+    <button class='button' hover-class='btn_hover' bindtap='submit'>绑 定</button>
+  </view>
+</scroll-view>

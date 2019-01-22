@@ -1,0 +1,23 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view class='header_view'>
+    <input class='input' bindinput='getInput' type='text' confirm-type='done' placeholder='请输入您要搜索分数或者学校'></input>
+    <text class='search_text' bindtap='searchClick'>搜索</text>
+  </view>
+
+  <text class='tip_text'>搜索历史</text>
+  <view class='content_view'>
+
+    <view class='content_view_view_major_view'>
+      <view wx:for="{{searchdata}}">
+        <view class='content_view_view_major_view_view'>
+          <text class='content_view_view_major_view_text' bindtap='itemClick' data-index='{{index}}'>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+    <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+  </view>
+
+</view>

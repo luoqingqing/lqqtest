@@ -1,0 +1,198 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+
+  <view class='header'>
+    <i-tabs current="{{current}}" color="#8087f5" bindchange="handleChange">
+      <i-tab key="1" title="待确认"></i-tab>
+      <i-tab key="2" title="预约成功"></i-tab>
+      <i-tab key="3" title="已完成"></i-tab>
+      <i-tab key="4" title="已取消"></i-tab>
+    </i-tabs>
+  </view>
+
+  <view class='content'>
+    <!--待确认-->
+    <view wx:if="{{current==1}}">
+      <view wx:for="{{data}}">
+        <view class='content_item_view'>
+          <view class='content_item_view_left_view'>
+            <image class='content_item_view_left_view_img' src='../resources/lecture_review.png' wx:if='{{item.flag==1}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/lecture_review.png' wx:elif='{{item.flag==10}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/examination_and_interpretation.png' wx:elif='{{item.flag==17}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/examination_and_interpretation.png' wx:elif='{{item.flag==18}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/on_demand_consultation.png' wx:elif='{{item.flag==3}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/on_demand_consultation.png' wx:elif='{{item.flag==12}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/education_workshop.png' wx:elif='{{item.flag==4}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/education_workshop.png' wx:elif='{{item.flag==11}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/volunteer_report.png' wx:elif='{{item.flag==5}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/self_recruitment_evaluation.png' wx:elif='{{item.flag==8}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/volunteer_service.png' wx:elif='{{item.flag==13}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/registration_service.png' wx:elif='{{item.flag==14}}'></image>
+          </view>
+          <view class='content_item_view_center_view'>
+            <text class='content_item_view_center_view_title_text'>{{item.title}}</text>
+            <!-- <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>所属类别：</text>
+              <text class='content_item_view_center_view_view_price_text'>{{item.clazz_type}}</text>
+            </view> -->
+            <!-- <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课老师：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.teacher}}</text>
+            </view> -->
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课时间：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.classTime}}</text>
+            </view>
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课地址：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.address}}</text>
+            </view>
+          </view>
+          <view class='content_item_view_right_view' style='background: #a5a9f2;' data-clazzid='{{item.clazz_id}}' data-aid='{{item.a_id}}' bindtap='itemClick'>
+            <text class='content_item_view_right_view_text'>取\n消</text>
+          </view>
+        </view>
+      </view>
+
+    </view>
+
+    <!--预约成功-->
+    <view wx:elif="{{current==2}}">
+      <view wx:for="{{data}}">
+        <view class='content_item_view'>
+          <view class='content_item_view_left_view'>
+            <image class='content_item_view_left_view_img' src='../resources/lecture_review.png' wx:if='{{item.flag==1}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/lecture_review.png' wx:elif='{{item.flag==10}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/examination_and_interpretation.png' wx:elif='{{item.flag==17}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/examination_and_interpretation.png' wx:elif='{{item.flag==18}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/on_demand_consultation.png' wx:elif='{{item.flag==3}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/on_demand_consultation.png' wx:elif='{{item.flag==12}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/education_workshop.png' wx:elif='{{item.flag==4}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/education_workshop.png' wx:elif='{{item.flag==11}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/volunteer_report.png' wx:elif='{{item.flag==5}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/self_recruitment_evaluation.png' wx:elif='{{item.flag==8}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/volunteer_service.png' wx:elif='{{item.flag==13}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/registration_service.png' wx:elif='{{item.flag==14}}'></image>
+          </view>
+          <view class='content_item_view_center_view'>
+            <text class='content_item_view_center_view_title_text'>{{item.title}}</text>
+            <!-- <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>所属类别：</text>
+              <text class='content_item_view_center_view_view_price_text'>{{item.clazz_type}}</text>
+            </view> -->
+            <!-- <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课老师：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.teacher}}</text>
+            </view> -->
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课时间：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.classTime}}</text>
+            </view>
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课地址：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.address}}</text>
+            </view>
+          </view>
+          <view class='content_item_view_right_view' style='background: #a5a9f2;'>
+            <text class='content_item_view_right_view_text'>成\n功</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--已完成-->
+    <view wx:elif="{{current==3}}">
+      <view wx:for="{{data}}">
+        <view class='content_item_view'>
+          <view class='content_item_view_left_view'>
+            <image class='content_item_view_left_view_img' src='../resources/lecture_review.png' wx:if='{{item.flag==1}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/lecture_review.png' wx:elif='{{item.flag==10}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/examination_and_interpretation.png' wx:elif='{{item.flag==17}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/examination_and_interpretation.png' wx:elif='{{item.flag==18}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/on_demand_consultation.png' wx:elif='{{item.flag==3}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/on_demand_consultation.png' wx:elif='{{item.flag==12}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/education_workshop.png' wx:elif='{{item.flag==4}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/education_workshop.png' wx:elif='{{item.flag==11}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/volunteer_report.png' wx:elif='{{item.flag==5}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/self_recruitment_evaluation.png' wx:elif='{{item.flag==8}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/volunteer_service.png' wx:elif='{{item.flag==13}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/registration_service.png' wx:elif='{{item.flag==14}}'></image>
+          </view>
+          <view class='content_item_view_center_view'>
+            <text class='content_item_view_center_view_title_text'>{{item.title}}</text>
+            <!-- <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>所属类别：</text>
+              <text class='content_item_view_center_view_view_price_text'>{{item.clazz_type}}</text>
+            </view> -->
+            <!-- <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课老师：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.teacher}}</text>
+            </view> -->
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课时间：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.classTime}}</text>
+            </view>
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课地址：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.address}}</text>
+            </view>
+          </view>
+          <view class='content_item_view_right_view' style='background: #a5a9f2;'>
+            <text class='content_item_view_right_view_text'>已\n完\n成</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!--已取消-->
+    <view wx:elif="{{current==4}}">
+      <view wx:for="{{data}}">
+        <view class='content_item_view'>
+          <view class='content_item_view_left_view'>
+            <image class='content_item_view_left_view_img' src='../resources/lecture_review.png' wx:if='{{item.flag==1}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/lecture_review.png' wx:elif='{{item.flag==10}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/examination_and_interpretation.png' wx:elif='{{item.flag==17}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/examination_and_interpretation.png' wx:elif='{{item.flag==18}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/on_demand_consultation.png' wx:elif='{{item.flag==3}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/on_demand_consultation.png' wx:elif='{{item.flag==12}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/education_workshop.png' wx:elif='{{item.flag==4}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/education_workshop.png' wx:elif='{{item.flag==11}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/volunteer_report.png' wx:elif='{{item.flag==5}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/self_recruitment_evaluation.png' wx:elif='{{item.flag==8}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/volunteer_service.png' wx:elif='{{item.flag==13}}'></image>
+            <image class='content_item_view_left_view_img' src='../resources/registration_service.png' wx:elif='{{item.flag==14}}'></image>
+          </view>
+          <view class='content_item_view_center_view'>
+            <text class='content_item_view_center_view_title_text'>{{item.title}}</text>
+            <!-- <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>所属类别：</text>
+              <text class='content_item_view_center_view_view_price_text'>{{item.clazz_type}}</text>
+            </view> -->
+            <!-- <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课老师：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.teacher}}</text>
+            </view> -->
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课时间：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.classTime}}</text>
+            </view>
+            <view class='content_item_view_center_view_view'>
+              <text class='content_item_view_center_view_view_tip_text'>上课地址：</text>
+              <text class='content_item_view_center_view_view_purchasetime_text'>{{item.address}}</text>
+            </view>
+          </view>
+          <view class='content_item_view_right_view' style='background: #a5a9f2;'>
+            <text class='content_item_view_right_view_text'>已\n取\n消</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+
+
+  </view>
+
+  <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+</view>

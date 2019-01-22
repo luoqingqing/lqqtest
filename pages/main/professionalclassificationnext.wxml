@@ -1,0 +1,19 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view class='content'>
+
+    <view wx:for="{{data}}">
+      <view class='content'>
+        <view class='content_item' data-majorno='{{item.major_no}}' bindtap='itemClick'>
+          <text class='content_item_text'>{{item.major_name}}</text>
+          <image class='content_item_img' src='../resources/more.png' />
+        </view>
+        <view class='space_view'></view>
+      </view>
+    </view>
+  </view>
+
+  <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+</view>

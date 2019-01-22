@@ -1,0 +1,124 @@
+page {
+  background-color: #f5f5f5;
+  height: 100%;
+}
+
+.parent {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100rpx;
+  position: fixed;
+  top: 0rpx;
+  right: 0rpx;
+  left: 0rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 100rpx;
+  margin-left: 20rpx;
+  margin-right: 20rpx;
+}
+
+.content_item_view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color: #fff;
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+}
+
+.content_item_view_left_view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 20rpx;
+}
+
+.content_item_view_left_view_img {
+  width: 120rpx;
+  height: 120rpx;
+}
+
+.content_item_view_center_view {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  margin-right: 20rpx;
+}
+
+.content_item_view_center_view_title_text {
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #8087f5;
+}
+
+.content_item_view_center_view_view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.content_item_view_center_view_view_tip_text {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #999;
+}
+
+.content_item_view_center_view_view_price_text {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #666;
+}
+
+.content_item_view_center_view_view_purchasetime_text {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #666;
+}
+
+.content_item_view_right_view {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  border-top-right-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.content_item_view_right_view_img {
+  width: 22rpx;
+  height: 46rpx;
+}
+
+.content_item_view_right_view_text {
+  font-size: 26rpx;
+  font-weight: 400;
+  color: #fff;
+}
+
+.prompt_text {
+  font-size: 30rpx;
+  font-weight: 400;
+  padding-top: 200rpx;
+  text-align: center;
+  color: #999;
+}

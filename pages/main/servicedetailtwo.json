@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-modal": "../dist/modal/index"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "教育工坊",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,81 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+  <view class='tip_view_aboutus'>
+    <image src='http://s.yizongceping.com/img/clazz/consult.jpg' class='img'></image>
+    <view class='bg'>
+      <view class='view_about'>
+        <text class='main'>关于我们</text>
+        <text class='en'>About us</text>
+      </view>
+    </view>
+  </view>
+  <!-- 公司简介 -->
+  <view class='tip_view_all'>
+    <view class='tip_view'>
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_box'>
+        <text class='tip_view_text'>公司简介</text>
+      </view>
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+    </view>
+    <view class='tip_view_companyProfile'>
+      <text class='text'>{{companyProfile}}</text>
+    </view>
+    <view class='tip_view'>
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_box'>
+        <text class='tip_view_text'>公司实力</text>
+      </view>
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+    </view>
+    <view class='tip_view_tell1' wx:for="{{companyStrength}}">
+      <view class='btn'>
+        <view class='tip_view_space1' />
+      </view>
+      <view class='tip_view_companyProfile1'>
+        <text class='text'>{{item}}</text>
+      </view>
+    </view>
+    <!-- 联系方式 -->
+    <view class='tip_view'>
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_box'>
+        <text class='tip_view_text'>联系方式</text>
+      </view>
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+      <view class='tip_view_space' />
+    </view>
+    <view class='tip_view_tell' wx:for="{{contactInformation}}">
+      <view class='btn1'>
+        <view class=' tip_view_space1 ' />
+      </view>
+      <view>
+        <text class='text '>{{item}}</text>
+      </view>
+    </view>
+    <view class='tip_view_tell '>
+      <view class='btn3'>
+        <view class=' tip_view_space1 ' />
+      </view>
+      <text class='text1 '>{{contacts}}</text>
+    </view>
+    <view class='tip_view_tell '>
+      <view class='btn2'>
+        <view class=' tip_view_space1 ' />
+      </view>
+      <text class='text'>{{address}}</text>
+    </view>
+    <view class='tip_view_img '></view>
+  </view>
+</view>

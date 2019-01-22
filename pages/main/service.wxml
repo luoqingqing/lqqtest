@@ -1,0 +1,257 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view class='header'>
+    <i-tabs current="{{current}}" color="#8087f5" bindchange="handleChange">
+      <i-tab key="1" title="高考志愿服务"></i-tab>
+      <i-tab key="2" title="自主招生服务"></i-tab>
+    </i-tabs>
+  </view>
+
+  <view class='content_view'>
+    <!--高考志愿服务-->
+    <view wx:if="{{current==1}}">
+      <view class='content'>
+
+        <view class='content_item_view' bindtap='psychologialEvaluationClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/psychological_evaluation.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>测评服务</text>
+            <text class='content_item_view_intro'>使用颐宗团队研发的专业测评工具，分阶段服务于考生和家长，为备战高考及志愿填报提供科学的数据支持。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='lectureClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/lecture_review.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>高考讲座</text>
+            <text class='content_item_view_intro'>集结高考志愿填报专家及高校教授提供针对高考的系列讲座，解答高考疑惑和难题。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='examinatioAndInterpretationClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/examination_and_interpretation.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>报告解读</text>
+            <text class='content_item_view_intro'>根据您的测评结果，专家一对一为您解读测评数据代表的信息，增加您对自己的了解并针对性地提供改进策略。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='consultationClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/on_demand_consultation.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>按需咨询</text>
+            <text class='content_item_view_intro'>一对一咨询，提供测评报告解读、备考心理咨询、学业困惑解答、志愿填报辅导、自主招生考试指导等服务。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='workshopsClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/education_workshop.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>教育工坊</text>
+            <text class='content_item_view_intro'>以活动、讨论、角色扮演等多种方式，聚焦亲子沟通、考生职业规划、应试心理调适等问题，全方位助力高考。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='careerExperienceCampClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/volunteer_report.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>志愿填报</text>
+            <text class='content_item_view_intro'>以考生学业成绩、人格特质、能力倾向、专业兴趣为参考信息，为考生量身设计最完美的高考志愿。</text>
+          </view>
+        </view>
+
+
+
+        <view class='content_item_view' bindtap='geneDetectionClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/gene_detection.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>基因检测</text>
+            <text class='content_item_view_intro'>“脑功能-基因组学实验室”提供权威的基因检测服务，为考生的应考准备、志愿填报提供科学依据，助力考生高考。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' style='margin-bottom: 20rpx;' bindtap='careerExperienceClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/career_experience.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>生涯体验</text>
+            <text class='content_item_view_intro'>高校体验营服务，与长江学者、卓越教授同行，“快人一步”适应大学生活，掌握高效学习方法，提升个人综合能力。</text>
+          </view>
+        </view>
+
+
+      </view>
+    </view>
+    <!--自主招生服务-->
+    <view wx:elif="{{current==2}}" class='content'>
+      <view class='content'>
+
+        <view class='content_item_view' bindtap='evaluationServiceClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/evaluation_service.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>测评服务</text>
+            <text class='content_item_view_intro'>使用颐宗团队研发的专业测评工具，分阶段服务于考生和家长，为备战高考及志愿填报提供科学的数据支持。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='selfRecruitmentEvaluationClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/self_recruitment_evaluation.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>自招评估</text>
+            <text class='content_item_view_intro'>使用颐宗团队研发的自招测评工具，结合学生学业成绩、能力资质进行诊断，生成自招评估报告，推荐院校及专业。</text>
+          </view>
+        </view>
+
+
+        <view class='content_item_view' bindtap='zkLectureClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/lecture_review.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>自主招生讲座</text>
+            <text class='content_item_view_intro'>集结高校教授提供自主招生和高考备考全方位的系列讲座，解开自主招生、高考备考及志愿填报的疑惑。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='zkWorkshopsClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/education_workshop.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>教育工坊</text>
+            <text class='content_item_view_intro'>以活动、讨论、角色扮演等多种方式，聚焦亲子沟通、考生职业规划、应试心理调适等问题，全方位助力高考。</text>
+          </view>
+        </view>
+
+
+
+        <view class='content_item_view' bindtap='zkExaminatioAndInterpretationClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/examination_and_interpretation.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>报告解读</text>
+            <text class='content_item_view_intro'>根据您的测评结果，专家一对一为您解读测评数据代表的信息，增加您对自己的了解并针对性地提供改进策略。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='zkConsultationClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/on_demand_consultation.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>按需咨询</text>
+            <text class='content_item_view_intro'>一对一咨询，提供测评报告解读、备考心理咨询、学业困惑解答、志愿填报辅导、自主招生考试指导等服务。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='volunteerServiceClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/volunteer_service.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>报名辅导</text>
+            <text class='content_item_view_intro'>结合学生测评结果、学生志愿、家长期望合理推荐院校及专业，指导学生撰写推荐信等重要文书。</text>
+          </view>
+        </view>
+
+        <!-- <view class='content_item_view' style=' background: linear-gradient(to right, #efc56f, #f5d087);' bindtap='parentalServiceClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/parental_service.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>家长服务</text>
+            <text class='content_item_view_intro'>颐宗玖泓家庭教育顾问团队为有自主招生服务需求的家长和学生针对性开设自主招生系列讲座、专家咨询、以及工作坊等系列活动，让您在自招的路上免入误区，少走弯路！</text>
+          </view>
+        </view> -->
+
+        <!-- <view class='content_item_view' style=' background: linear-gradient(to right, #629ff0, #7bb0f6);' bindtap='registrationServiceClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/registration_service.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>报名服务</text>
+            <text class='content_item_view_intro'>由高校教授亲身辅导，告诉您怎样写初审通过率高的自荐信，让自荐信为初审助力。</text>
+          </view>
+        </view> -->
+
+
+        <view class='content_item_view' bindtap='examinationServiceClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/registration_service.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>应试指导</text>
+            <text class='content_item_view_intro'>结合历年高校自招经验，一对一辅导自招笔试、面试，解决学生自招应试中的心理状态、学业水平等相关问题。</text>
+          </view>
+        </view>
+
+        <view class='content_item_view' bindtap='careerExperienceCampClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/volunteer_report.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>志愿填报</text>
+            <text class='content_item_view_intro'>以考生学业成绩、人格特质、能力倾向、专业兴趣为参考信息，为考生量身设计最完美的志愿。</text>
+          </view>
+        </view>
+        <!-- <view class='content_item_view' style=' background: linear-gradient(to right, #f28662, #f6977b);margin-bottom: 20rpx;' bindtap='disciplineExperienceCampClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/subject_experience.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>学科体验</text>
+            <text class='content_item_view_intro'>高考顺利收官之后，助力于学生高校生活适应及规划职业生涯，颐宗玖泓特别开展高校学科体验营服务，让学生提前体验大学生活，增强适应性，“快人一步”提前掌握高校学习能力，领略高校独有魅力。</text>
+          </view>
+        </view> -->
+
+        <view class='content_item_view' bindtap='zkGeneDetectionClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/gene_detection.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>基因检测</text>
+            <text class='content_item_view_intro'>“脑功能-基因组学实验室”提供权威的基因检测服务，为考生的应考准备、志愿填报提供科学依据，助力考生高考。</text>
+          </view>
+        </view>
+
+
+        <view class='content_item_view' style='margin-bottom: 20rpx;' bindtap='zkCareerExperienceClick'>
+          <view>
+            <image class='content_item_view_img' src='../resources/career_experience.png'></image>
+          </view>
+          <view class='content_item_view_view'>
+            <text class='content_item_view_title'>生涯体验</text>
+            <text class='content_item_view_intro'>高校体验营服务，与长江学者、卓越教授同行，“快人一步”适应大学生活，掌握高效学习方法，提升个人综合能力。</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <i-modal visible="{{ dialogVisible }}" actions="{{ actions }}" bind:click="actionsClick">
+    <view style='padding:20rpx;'>
+      <text class='dialogVisible_tip_text'>学生和家长根据身份不同，测评题目有所不同。为确保测评的准确性，请如实选择您的测评身份</text>
+    </view>
+  </i-modal>
+</view>

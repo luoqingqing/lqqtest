@@ -1,0 +1,127 @@
+<view class='space_height_two_view'></view>
+<scroll-view>
+
+  <view class='parent'>
+
+    <view class='header_view'>
+      <view class='header_view_view' style='background: url({{data.img_url}}) no-repeat;background-size: 100%;background-attachment:fixed;'>
+        <view class='header_view_view_header_view'>
+          <image class='header_view_view_header_view_img' src='../resources/mem_logo.png'></image>
+          <text class='header_view_view_header_view_state_text' wx:if="{{data.is_buy==0}}">未拥有</text>
+          <text class='header_view_view_header_view_state_text' wx:elif="{{data.is_buy==1}}">已拥有</text>
+        </view>
+        <view class='header_view_view_content_view'>
+          <text class='header_view_view_content_view_name_text'>{{data.title}}</text>
+          <text class='header_view_view_content_view_data_text'>{{data.duetime}}</text>
+        </view>
+        <view class='header_view_view_footer_view'>
+          <text class='header_view_view_footer_view_price_text'>¥{{data.price}}</text>
+        </view>
+      </view>
+    </view>
+
+
+    <view class='content_tip_view'>
+      <view class='content_view_view'>
+        <view class='content_view_view_space_view' />
+        <text class='content_view_view_tip_text'>产品介绍</text>
+        <view class='content_view_view_space_view' />
+      </view>
+      <view class='content_tip_view_view' style='margin-top: 20rpx;'>
+        <view class='content_view_yuan'></view>
+        <text style='font-size: 34rpx;font-weight: 400;color: #8187f5;'>{{applicableObject}}</text>
+      </view>
+      <text style='font-size: 26rpx;font-weight: 400;color: #666666;margin-top: 10rpx;margin-bottom: 10rpx;'>{{purchaseHints}}</text>
+
+      <view class='content_tip_view_view_intro'>
+        <view wx:for="{{introduction}}">
+          <text class='content_tip_view_view_intro_text'>{{item.title}}</text>
+        </view>
+      </view>
+
+    </view>
+
+    <view class='content_view'>
+
+      <view class='content_view_view'>
+        <view class='content_view_view_space_view ' />
+        <text class='content_view_view_tip_text'>本卡服务</text>
+        <view class='content_view_view_space_view ' />
+      </view>
+
+      <view class='content_view_view_two'>
+        <view wx:for="{{authdata}}">
+          <view class='content_view_view_two_view' bindtap="jumPage" data-index='{{index}}'>
+            <view class='content_view_view_two_view_view'>
+              <text class='content_view_view_two_view_title_text'>{{item.title}}</text>
+              <text class='content_view_view_two_view_intro_text'>{{item.intro}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <view class='content_view_view' style=' margin-top: 20rpx;'>
+        <view class='content_view_view_space_view' />
+        <text class='content_view_view_tip_text'>我们的承诺</text>
+        <view class='content_view_view_space_view' />
+      </view>
+    </view>
+
+    <view class='content_tip_view' style=' margin-top: 20rpx;'>
+
+      <view class='content_tip_view_view'>
+        <view class='content_view_yuan'></view>
+        <text class='content_tip_view_view_big_text'>权威</text>
+      </view>
+      <text class='content_tip_view_view_small_text'>长江学者领衔，数十名专家学者提供服务</text>
+
+      <view class='content_tip_view_view'>
+        <view class='content_view_yuan'></view>
+        <text class='content_tip_view_view_big_text'>科学</text>
+      </view>
+      <text class='content_tip_view_view_small_text'>心理测评追踪备考状态；讲座掌握备考策略；工作坊应对备考困境；一对一咨询根除备考疑惑；为科学备考保驾护航</text>
+
+      <view class='content_tip_view_view'>
+        <view class='content_view_yuan'></view>
+        <text class='content_tip_view_view_big_text'>严谨</text>
+      </view>
+      <text class='content_tip_view_view_small_text'>对比分析市场上已有的各类产品，紧贴国家纲要</text>
+
+      <view class='content_tip_view_view'>
+        <view class='content_view_yuan'></view>
+        <text class='content_tip_view_view_big_text'>高效</text>
+      </view>
+      <text class='content_tip_view_view_small_text'>30余年的学生发展研究，积累了大量的成功案例，焦点解决高考疑惑</text>
+
+      <view class='content_view_view' style='margin-bottom: 20rpx;'>
+        <view class='content_view_view_space_view' />
+        <text class='content_view_view_tip_text'>服务流程</text>
+        <view class='content_view_view_space_view' />
+      </view>
+
+      <view wx:for="{{membershipProcess}}" class='content_tip_view_view_view'>
+        <view class='content_tip_view_view_view'>
+          <text class='content_tip_view_view_view_text'>{{item.title}}</text>
+          <image class='content_tip_view_view_view_img' src='../resources/go_down.png' wx:if='{{membershipProcessSize!=index+1}}'></image>
+        </view>
+      </view>
+      <view style='margin-bottom: 20rpx;'></view>
+
+    </view>
+
+    <view class='footer_view'>
+
+      <text class='footer_view_phonenum_text' bindtap='phonenumClick'>服务热线</text>
+      <text class='footer_view_purchase_text' bindtap='purchaseClick' wx:if="{{data.is_buy==0}}">购买</text>
+      <text class='footer_view_purchase_text' wx:elif="{{data.is_buy==1}}">已购买</text>
+
+    </view>
+
+    <i-modal visible="{{ dialogVisible }}" actions="{{ actions }}" bind:click="actionsClick1">
+      <view style='padding:20rpx;'>
+        <text class='dialogVisible_tip_text'>学生和家长根据身份不同，测评题目有所不同。为确保测评的准确性，请如实选择您的测评身份</text>
+      </view>
+    </i-modal>
+  </view>
+
+</scroll-view>

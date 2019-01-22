@@ -1,0 +1,24 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view wx:for="{{data}}">
+    <view class='content'>
+
+      <view class='item_view' data-id='{{item.id}}' bindtap='itemClick'>
+
+        <view class='item_header_view'>
+          <text class='item_header_view_title_text'>{{item.title}}</text>
+          <text class='item_header_view_time_text'>{{item.time}}</text>
+        </view>
+        <view class='item_space'></view>
+
+        <text class='item_text'>{{item.content}}</text>
+
+      </view>
+
+      <view class='view_bg' />
+    </view>
+  </view>
+  <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+</view>

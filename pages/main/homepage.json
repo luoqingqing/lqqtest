@@ -1,0 +1,9 @@
+{
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "颐宗志愿",
+  "navigationBarTextStyle": "black",
+  "onReachBottomDistance": 60,
+  "enablePullDownRefresh": true,
+  "onReachBottom": true
+}

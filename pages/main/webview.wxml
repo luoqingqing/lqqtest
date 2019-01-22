@@ -1,0 +1,2 @@
+<view class='space_height_two_view'></view>
+<web-view src='{{url}}'></web-view>

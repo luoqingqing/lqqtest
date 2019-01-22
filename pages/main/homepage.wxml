@@ -1,0 +1,76 @@
+<view class='space_height_two_view'></view>
+<scroll-view class='sc_view'>
+  <swiper indicator-dots="true" current="1" circular="true" previous-margin='50rpx' next-margin='50rpx' autoplay="true" interval="5000" duration="1000" style='height:470rpx;'>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image id="{{item.id}}" src="{{item.img_url}}" class="slide_image" bindtap='banner_onclick' mode="scaleToFill" />
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='footer_view'>
+    <view class='footer_view_view' bindtap='newsClick'>
+      <image class='footer_img' src='../resources/news.png'></image>
+      <text class='footer_text'>{{newstext}}</text>
+    </view>
+    <view class='footer_view_view' bindtap='universitySearchClick'>
+      <image class='footer_img' src='../resources/volunteer_search.png'></image>
+      <text class='footer_text'>{{universitySearchText}}</text>
+    </view>
+    <view class='footer_view_view' bindtap='expertsClick'>
+      <image class='footer_img' src='../resources/experts.png'></image>
+      <text class='footer_text'>{{expertstext}}</text>
+    </view>
+    <view class='footer_view_view' bindtap='productFeaturesClick'>
+      <image class='footer_img' src='../resources/product_features.png'></image>
+      <text class='footer_text'>{{productFeaturestext}}</text>
+    </view>
+  </view>
+
+  <view class='content_view'>
+
+    <!-- <view class='content_content_view_one' bindtap='oneViewClick'>
+      <view class='content_content_view_view'>
+        <view class='content_content_view_view_view'>
+          <text class='content_content_view_view_title_text_one'>加入我们</text>
+          <text class='content_content_view_view_title_text_two' style='color:#1f7dc5;'>高考志愿之路</text>
+        </view>
+        <text class='content_content_view_view_intro_text'>全面分析找出适合你的学校</text>
+        <text class='content_content_view_view_go_text' style='background-color: #ff6b15;'>立即了解</text>
+      </view>
+      <image class='content_content_view_view_img' src='../resources/college_entrance_examination.jpg'></image>
+    </view>
+    
+    <view class='content_content_view_two' bindtap='twoViewClick'>
+      <view class='content_content_view_view'>
+        <view class='content_content_view_view_view'>
+          <text class='content_content_view_view_title_text_one'>加入我们</text>
+          <text class='content_content_view_view_title_text_two' style='color:#fc5c89;'>自主招生之路</text>
+        </view>
+        <text class='content_content_view_view_intro_text'>专业团队助力你的自招之路</text>
+        <text class='content_content_view_view_go_text' style='background-color: #de2292;'>立即了解</text>
+      </view>
+      <image class='content_content_view_view_img' src='../resources/independent_enrolment.jpg'></image>
+    </view> -->
+
+    <view class='content_view_view'>
+      <view wx:for="{{product}}">
+        <view class='content_view_view_view' data-index='{{index}}' bindtap='memcardClick'>
+          <view class='content_view_view_view_view'>
+            <text class='content_view_view_view_view_text'>{{item.title}}</text>
+            <view class='content_view_view_view_view_view'>
+              <view class='content_view_view_view_view_view_view'>
+                <text class='content_view_view_view_view_view_view_intro_text'>{{item.introduction}}</text>
+                <text class='content_view_view_view_view_view_view_price_text'>¥{{item.price}}</text>
+                <text class='content_view_view_view_view_view_view_know_text' style='background-color: {{item.background}};'>立即了解</text>
+              </view>
+              <image class='content_view_view_view_view_view_img' src='{{item.img_url}}'></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+</scroll-view>

@@ -1,0 +1,47 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view class='header'>
+
+    <picker bindchange="bindschoolSystemChange" value="{{schoolSystem}}" range="{{schoolSystemData}}">
+      <view class='picker_view'>
+        <view class='picker_view_view'>
+          <text class='header_view_text'>{{schoolSystem}}</text>
+          <!-- <view class='hd_view'></view> -->
+        </view>
+      </view>
+    </picker>
+
+    <view class='header_view_search' bindtap='searchClick'>
+      <text class='header_view_search_text'>点击搜索</text>
+    </view>
+  </view>
+
+  <view class='content_view'>
+
+    <view class='content_view_left'>
+      <view wx:for="{{typedata}}">
+        <view class='content_view_left' data-index='{{index}}' bindtap='typedataClick'>
+          <text class='content_view_left_selceted_text' wx:if="{{index==selectedPosition}}">{{item.title}}</text>
+          <text class='content_view_left_not_selceted_text' wx:else>{{item.title}}</text>
+          <view class='space_height_two_view'></view>
+        </view>
+      </view>
+    </view>
+
+    <view class='content_view_content'>
+      <view wx:for="{{detaildata}}">
+        <view class='content_view_content'>
+          <view class='content_view_content_view' data-id='{{item.major_no}}' data-title='{{item.title}}' bindtap='detaildataClick'>
+            <text class='content_view_content_view_text'>{{item.title}}</text>
+            <image class='content_view_content_view_img' src='../resources/more.png' />
+          </view>
+          <view class='space_height_two_view'></view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

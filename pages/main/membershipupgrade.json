@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "i-steps": "../dist/steps/index",
+    "i-step": "../dist/step/index"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "会员权限",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,102 @@
+<view class='space_height_two_view'></view>
+<scroll-view class='sc_view'>
+  <view class='parent'>
+
+    <view class='header_view'>
+      <image class='header_img' src="{{lessonImg}}"></image>
+      <view class='header_view_view'>
+        <text class='header_view_text'>{{lessonName}}</text>
+      </view>
+
+      <!-- <scroll-view scroll-x="false" class='sc'>
+        <view class='header_teacher_view'>
+          <view wx:for="{{teacherdata}}">
+            <view class='header_teacher_view'>
+              <view class='header_teacher_details_view'>
+                <image class='header_teacher_details_view_img' src='{{item.img}}'></image>
+                <text class='header_teacher_details_view_text'>{{item.name}}</text>
+              </view>
+            </view>
+          </view>
+        </view>
+      </scroll-view> -->
+
+    </view>
+
+    <i-modal visible="{{ dialogVisible }}" actions="{{ actions }}" bind:click="actionsClick">
+      <view style='padding:20rpx;'>
+        <text class='dialogVisible_tip_text'>您当前身份无法免费预约该课程。您可以选择单独购买该课程或者升级套餐再进行预约</text>
+      </view>
+    </i-modal>
+
+    <view class='content_view'>
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>简介</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{lessonIntroduction}}</text>
+
+      <view style='display:{{clazz_isshow}}'>
+        <view class='space_view' />
+        <view class='content_view_flag_view'>
+          <view class='content_view_flag_view_space' />
+          <text class='content_view_flag_view_text'>服务时间</text>
+        </view>
+        <text class='content_lesson_introduction_text'>{{start_clazz_time}}</text>
+      </view>
+
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>服务时长</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{start_clazz_duration}}</text>
+
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>地址</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{address}}</text>
+
+      <!-- <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>可选时间</text>
+      </view>
+      <view class='timetable_view'>
+        <view wx:for="{{timetable}}">
+          <view class='timetable_view_view'>
+            available==1代表可以预约，available==0代表不能预约，available==2代表已预约
+            <block wx:if="{{item.available==1}}">
+              <view class='timetable_view_view' wx:if="{{selectedNum==index}}">
+                <text class='timetable_selected_text' data-index='{{index}}'>{{item.teacher}}\n{{item.time}}</text>
+              </view>
+              <view class='timetable_view_view' wx:else>
+                <text class='timetable_not_selected_text' data-index='{{index}}' bindtap='selectedClick'>{{item.teacher}}\n{{item.time}}</text>
+              </view>
+            </block>
+
+            <view class='timetable_view_view' wx:else>
+              <text class='timetable_non_appointment' data-index='{{index}}'>{{item.teacher}}\n{{item.time}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> -->
+
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>预约介绍</text>
+      </view>
+      <text class='content_frequency_service_text'>{{frequencyService}}</text>
+      <text class='content_lesson_introduction_text'>{{appointmentIntroduction}}</text>
+
+
+      <view class='space_view' />
+      <button class='footer_button' hover-class='btn_hover' bindtap='submit' disabled='{{disabled}}'>{{submitText}}</button>
+    </view>
+  </view>
+</scroll-view>

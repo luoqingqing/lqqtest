@@ -1,0 +1,89 @@
+<view class='space_height_two_view'></view>
+<scroll-view class='sc_view'>
+  <view class='parent'>
+
+    <view class='header_view'>
+      <image class='header_img' src="{{imgUrl}}"></image>
+      <view class='header_view_view'>
+        <text class='header_view_text'>{{lessonName}}</text>
+      </view>
+
+      <scroll-view scroll-x="false" class='sc'>
+        <view class='header_number_view'>
+          <view wx:for="{{numdata}}">
+            <view class='header_number_view'>
+              <text wx:if="{{selectedNum==index}}" class='header_number_selected_text'>第{{item.periods}}期</text>
+              <text wx:else class='header_number_not_selected_text' data-index='{{index}}' bindtap='selectedClick'>第{{item.periods}}期</text>
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+
+    </view>
+
+    <i-modal visible="{{ dialogVisible }}" actions="{{ actions }}" bind:click="actionsClick">
+      <view style='padding:20rpx;'>
+        <text class='dialogVisible_tip_text'>您当前身份无法免费预约该课程。您可以选择单独购买该课程或者升级套餐再进行预约</text>
+      </view>
+    </i-modal>
+
+    <view class='content_view'>
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>活动简介</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{lessonIntroduction}}</text>
+
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>活动内容</text>
+      </view>
+      <view wx:for="{{primaryCoverage}}">
+        <text class='content_lesson_primary_coverage_text'>{{item.title}}</text>
+      </view>
+
+      <view class='space_view' style=' margin-top: 20rpx;' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>活动对象</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{activeObject}}</text>
+
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>活动时长</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{lengthOfActivity}}</text>
+
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>活动时间</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{startClassTime}}</text>
+
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>活动地址</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{address}}</text>
+
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>预约介绍</text>
+      </view>
+      <text class='content_frequency_service_text'>{{frequencyService}}</text>
+      <text class='content_lesson_introduction_text'>{{appointmentIntroduction}}</text>
+
+    </view>
+
+    <view class='space_view' />
+    <button class='footer_button' hover-class='btn_hover' bindtap='submit' disabled="{{disabled}}">{{submitText}}</button>
+
+  </view>
+</scroll-view>

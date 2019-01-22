@@ -1,0 +1,41 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+
+
+  <view class='header_view'>
+    <i-tabs current="{{current}}" color="#8087f5" bindchange="handleChange">
+      <i-tab key="1" title="简介"></i-tab>
+      <!-- <i-tab key="2" title="招生计划"></i-tab> -->
+      <i-tab key="3" title="专业及分数"></i-tab>
+    </i-tabs>
+  </view>
+
+  <view class='content_view'>
+
+    <!--简介-->
+    <view wx:if="{{current==1}}" class='content_view_view'>
+      <view class='content_view_view_brief_introduction_view'>
+        <text class='content_view_view_brief_introduction_view_text'>{{info.intro}}</text>
+      </view>
+    </view>
+
+    <!--招生计划-->
+    <view wx:elif="{{current==2}}" class='content_view_view'>
+      <view class='content_view_view_enrolment_plan_view'>
+        <text class='content_view_view_enrolment_plan_view_text'>{{schoolIntroduction}}</text>
+      </view>
+    </view>
+
+    <!--分数线-->
+    <view wx:elif="{{current==3}}" class='content_view_view_major_view'>
+      <view wx:for="{{professionalData}}">
+        <view class='content_view_view_major_view_view'>
+          <text class='content_view_view_major_view_text' bindtap='itemClick' data-majorno='{{item.major_no}}' data-major='{{item.major}}'>{{item.major}}</text>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+</view>

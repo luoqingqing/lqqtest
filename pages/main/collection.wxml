@@ -1,0 +1,40 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view wx:for="{{data}}">
+    <view class='content'>
+
+      <view class='item_view' data-id='{{item.id}}' bindtap='itemClick'>
+        <image class='item_img' src="{{item.img}}" mode='scaleToFill'></image>
+
+        <view class='item_view_one'>
+          <text class='item_title'>{{item.title}}</text>
+
+          <view class='item_view_view_one'>
+            <text class='item_prompt_text'>上课老师：</text>
+            <text class='item_text'>{{item.teacher}}</text>
+          </view>
+
+          <view class='item_view_view_one'>
+            <text class='item_prompt_text'>上课时间：</text>
+            <text class='item_text'>{{item.classTime}}</text>
+          </view>
+
+          <view class='item_view_view_one'>
+            <text class='item_prompt_text'>上课地址：</text>
+            <text class='item_text'>{{item.address}}</text>
+          </view>
+
+          <view class='operation_view'>
+            <text class='cancel_collection' hover-class='btn_hover' data-barcode='{{item.barcode}}' catchtap='renew_onclick'>取消</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='view_bg' />
+
+    </view>
+  </view>
+  <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+</view>

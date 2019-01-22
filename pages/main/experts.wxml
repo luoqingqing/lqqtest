@@ -1,0 +1,103 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view class='banner_view'>
+    <swiper indicator-dots="false" circular="true" autoplay="true" interval="5000" duration="1000" style=' height: 420rpx;'>
+      <block wx:for="{{imgUrls}}">
+        <swiper-item>
+          <image id="{{item.id}}" src="{{item.img_url}}" class="slide_image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view class='header'>
+    <i-tabs current="{{current}}" color="#8087f5" bindchange="handleChange">
+      <i-tab key="1" title="创始人团队"></i-tab>
+      <i-tab key="2" title="教授"></i-tab>
+      <i-tab key="3" title="副教授"></i-tab>
+      <i-tab key="4" title="讲师"></i-tab>
+    </i-tabs>
+  </view>
+
+  <view class='content'>
+    <!--创始人团队-->
+    <view wx:if="{{current==1}}">
+      <view wx:for="{{data}}">
+        <view class='content_item' bindtap='itemClick' data-id='{{item.id}}'>
+          <view class='content_item_view'>
+            <view>
+              <image class='content_item_view_img' src='{{item.img_url}}' data-/>
+            </view>
+            <view class='content_item_view_view'>
+              <text class='content_item_view_name_text'>{{item.name}}</text>
+              <text class='content_item_view_degree_text'>{{item.intro}}</text>
+            </view>
+          </view>
+          <!-- <image class='content_item_view_next_img' src='../resources/more.png' /> -->
+        </view>
+        <view class='space_view'></view>
+      </view>
+    </view>
+
+    <!--教授-->
+    <view wx:elif="{{current==2}}">
+      <view wx:for="{{data}}">
+        <view class='content_item' bindtap='itemClick' data-id='{{item.id}}'>
+          <view class='content_item_view'>
+            <view>
+              <image class='content_item_view_img' src='{{item.img_url}}' />
+            </view>
+            <view class='content_item_view_view'>
+              <text class='content_item_view_name_text'>{{item.name}}</text>
+              <text class='content_item_view_degree_text'>{{item.intro}}</text>
+            </view>
+          </view>
+          <!-- <image class='content_item_view_next_img' src='../resources/more.png' /> -->
+        </view>
+        <view class='space_view'></view>
+      </view>
+    </view>
+
+    <!--副教授-->
+    <view wx:elif="{{current==3}}">
+      <view wx:for="{{data}}">
+        <view class='content_item' bindtap='itemClick' data-id='{{item.id}}'>
+          <view class='content_item_view'>
+            <view>
+              <image class='content_item_view_img' src='{{item.img_url}}' />
+            </view>
+            <view class='content_item_view_view'>
+              <text class='content_item_view_name_text'>{{item.name}}</text>
+              <text class='content_item_view_degree_text'>{{item.intro}}</text>
+            </view>
+          </view>
+          <!-- <image class='content_item_view_next_img' src='../resources/more.png' /> -->
+        </view>
+        <view class='space_view'></view>
+      </view>
+    </view>
+
+    <!--讲师-->
+    <view wx:elif="{{current==4}}">
+      <view wx:for="{{data}}">
+        <view class='content_item' bindtap='itemClick' data-id='{{item.id}}'>
+          <view class='content_item_view'>
+            <view>
+              <image class='content_item_view_img' src='{{item.img_url}}' />
+            </view>
+            <view class='content_item_view_view'>
+              <text class='content_item_view_name_text'>{{item.name}}</text>
+              <text class='content_item_view_degree_text'>{{item.intro}}</text>
+            </view>
+          </view>
+          <!-- <image class='content_item_view_next_img' src='../resources/more.png' /> -->
+        </view>
+        <view class='space_view'></view>
+      </view>
+    </view>
+  </view>
+
+  <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+</view>

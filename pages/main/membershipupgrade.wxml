@@ -1,0 +1,142 @@
+<view class='space_height_two_view'></view>
+<scroll-view>
+  <view class='parent' wx:if='{{cardNum!=0}}'>
+
+    <view class='header_view'>
+      <swiper indicator-dots="false" circular="true" autoplay="false" interval="50000" duration="500" style=' height: 470rpx;' bindchange='getCurrent'>
+        <block wx:for="{{data}}">
+          <swiper-item class='header_view_swiper_item'>
+            <view class='header_view_view' style='background: url({{item.img_url}}) no-repeat;background-size: 100%;background-attachment:fixed'>
+              <view class='header_view_view_header_view'>
+                <image class='header_view_view_header_view_img' src='../resources/mem_logo.png'></image>
+                <text class='header_view_view_header_view_state_text' wx:if="{{item.is_buy==0}}">未拥有</text>
+                <text class='header_view_view_header_view_state_text' wx:elif="{{item.is_buy==1}}">已拥有</text>
+              </view>
+              <view class='header_view_view_content_view'>
+                <text class='header_view_view_content_view_name_text'>{{item.title}}</text>
+                <text class='header_view_view_content_view_data_text'>{{item.duetime}}</text>
+              </view>
+              <view class='header_view_view_footer_view'>
+                <text class='header_view_view_footer_view_price_text'>¥{{item.price}}</text>
+              </view>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+
+    <!-- <view class='content_tip_view'>
+      <view class='content_view_view'>
+        <view class='content_view_view_space_view' />
+        <text class='content_view_view_tip_text'>产品介绍</text>
+        <view class='content_view_view_space_view' />
+      </view>
+      <view class='content_tip_view_view' style='margin-top: 20rpx;'>
+        <view class='content_view_yuan'></view>
+        <text style='font-size: 34rpx;font-weight: 400;color: #8187f5;'>适用对象：高三学生及家长</text>
+      </view>
+      <text style='font-size: 26rpx;font-weight: 400;color: #666666;margin-top: 10rpx;'>购买成功后，颐宗高三志愿专家会尽快联系您</text>
+      <text style='font-size: 26rpx;font-weight: 400;color: #999999; background-color: #fafafa;padding: 20rpx;margin-top: 10rpx;letter-spacing: 2rpx;'>政策难懂？我们帮您解读！\n学校众多？我们帮您筛选！\n专业太多？我们帮您匹配！\n资讯不足？我们帮您补充！\n期望冲突？我们帮您化解！\n家长和学生焦虑？我们给您缓解！\n家长不会指导？我们给您方法！\n不会科学备考？我们给您策略！\n不会填报志愿？我们给您技巧！</text>
+    </view> -->
+
+    <view class='content_view'>
+      <view class='content_view_view'>
+        <view class='content_view_view_space_view ' />
+        <text class='content_view_view_tip_text'>本卡服务</text>
+        <view class='content_view_view_space_view ' />
+      </view>
+
+      <view class='content_view_view_two'>
+        <view wx:for="{{authdata}}">
+          <view class='content_view_view_two_view'>
+            <view class='content_view_view_two_view_view'>
+              <text class='content_view_view_two_view_title_text'>{{item.title}}</text>
+              <text class='content_view_view_two_view_intro_text'>{{item.intro}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+
+      <!-- <view class='content_view_view' style='margin-top: 20rpx;'>
+        <view class='content_view_view_space_view' />
+        <text class='content_view_view_tip_text'>我们的承诺</text>
+        <view class='content_view_view_space_view' />
+      </view> -->
+    </view>
+
+    <!-- <view class='content_tip_view' style=' margin-top: 20rpx;'>
+
+      <view class='content_tip_view_view'>
+        <view class='content_view_yuan'></view>
+        <text class='content_tip_view_view_big_text'>权威</text>
+      </view>
+      <text class='content_tip_view_view_small_text'>长江学者领衔，数十名专家学者提供服务</text>
+
+      <view class='content_tip_view_view'>
+        <view class='content_view_yuan'></view>
+        <text class='content_tip_view_view_big_text'>科学</text>
+      </view>
+      <text class='content_tip_view_view_small_text'>心理测评追踪备考状态；讲座掌握备考策略；工作坊应对备考困境；一对一咨询根除备考疑惑；为科学备考保驾护航</text>
+
+      <view class='content_tip_view_view'>
+        <view class='content_view_yuan'></view>
+        <text class='content_tip_view_view_big_text'>严谨</text>
+      </view>
+      <text class='content_tip_view_view_small_text'>对比分析市场上已有的各类产品，紧贴国家纲要</text>
+
+      <view class='content_tip_view_view'>
+        <view class='content_view_yuan'></view>
+        <text class='content_tip_view_view_big_text'>高效</text>
+      </view>
+      <text class='content_tip_view_view_small_text'>30余年的学生发展研究，积累了大量的成功案例，焦点解决高考疑惑</text>
+
+      <view class='content_view_view'>
+        <view class='content_view_view_space_view' />
+        <text class='content_view_view_tip_text'>服务流程</text>
+        <view class='content_view_view_space_view' />
+      </view>
+
+      <view class='content_tip_view_view_view' style='margin-top: 20rpx;'>
+        <text class='content_tip_view_view_view_text'>购买</text>
+        <image class='content_tip_view_view_view_img' src='../resources/go_down.png'></image>
+        <text class='content_tip_view_view_view_text'>测评</text>
+        <image class='content_tip_view_view_view_img' src='../resources/go_down.png'></image>
+        <text class='content_tip_view_view_view_text'>预约讲座、教育工坊并参加（高考前）</text>
+        <image class='content_tip_view_view_view_img' src='../resources/go_down.png'></image>
+        <text class='content_tip_view_view_view_text'>专家一对一咨询</text>
+        <image class='content_tip_view_view_view_img' src='../resources/go_down.png'></image>
+        <text class='content_tip_view_view_view_text'>志愿制定及优化（高考后）</text>
+        <image class='content_tip_view_view_view_img' src='../resources/go_down.png'></image>
+        <text class='content_tip_view_view_view_text'>收获录取通知书</text>
+      </view>
+
+    </view> -->
+
+    <!-- <view class='footer_view'>
+
+      <text class='footer_view_phonenum_text' bindtap='phonenumClick'>服务热线</text>
+      <text class='footer_view_purchase_text' bindtap='purchaseClick' wx:if="{{is_buy==0}}">购买</text>
+      <text class='footer_view_purchase_text' wx:elif="{{is_buy==1}}">已购买</text>
+
+    </view> -->
+
+    <view class='content_view_view' style='margin-top: 20rpx;margin-bottom: 20rpx;'>
+      <view class='content_view_view_space_view' />
+      <text class='content_view_view_tip_text'>服务流程</text>
+      <view class='content_view_view_space_view' />
+    </view>
+
+    <view wx:for="{{membershipProcess}}" class='content_tip_view_view_view'>
+      <view class='content_tip_view_view_view'>
+        <text class='content_tip_view_view_view_text'>{{item.title}}</text>
+        <image class='content_tip_view_view_view_img' src='../resources/go_down.png' wx:if='{{membershipProcessSize!=index+1}}'></image>
+      </view>
+    </view>
+
+    <view style='margin-bottom: 40rpx;'></view>
+
+  </view>
+  <view class='prompt_view' wx:elif='{{cardNum==0}}'>
+    <text class='prompt_text'>{{loadingText}}</text>
+  </view>
+</scroll-view>

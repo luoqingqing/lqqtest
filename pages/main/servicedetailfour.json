@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "i-modal": "../dist/modal/index"
+  },
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTitleText": "自招评估",
+  "navigationBarTextStyle": "black"
+}

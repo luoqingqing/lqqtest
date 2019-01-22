@@ -1,0 +1,63 @@
+<view class='space_height_two_view'></view>
+<scroll-view class='sc_view'>
+  <view class='parent'>
+
+    <view class='header_view'>
+      <image class='header_view_img' src='{{imgUrl}}'></image>
+      <view class='header_view_view'>
+        <view class='header_view_view_view'>
+          <text class='header_view_view_tip_text'>姓名：</text>
+          <text class='header_view_text'>{{name}}</text>
+        </view>
+        <view class='header_view_view_view'>
+          <text class='header_view_view_tip_text'>出生：</text>
+          <text class='header_view_text'>{{birthday}}</text>
+        </view>
+        <view class='header_view_view_view'>
+          <text class='header_view_view_tip_text'>最高学历：</text>
+          <text class='header_view_text'>{{education}}</text>
+        </view>
+        <view class='header_view_view_view'>
+          <text class='header_view_view_tip_text'>毕业学校：</text>
+          <text class='header_view_text'>{{school}}</text>
+        </view>
+
+      </view>
+    </view>
+
+    <view class='content_view'>
+      <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>个人简历</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{personalProfile}}</text>
+
+      <!-- <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>课程介绍</text>
+      </view>
+      <text class='content_lesson_introduction_text'>{{lessonIntroduction}}</text> -->
+
+      <!-- <view class='space_view' />
+      <view class='content_view_flag_view'>
+        <view class='content_view_flag_view_space' />
+        <text class='content_view_flag_view_text'>上课视频</text>
+      </view>
+      <view class='timetable_view'>
+        <view wx:for="{{classVideo}}">
+          <view class='timetable_view_view' bindtap='itemClick' data-index='{{index}}'>
+            <image class='timetable_view_view_img' src='{{item.img_url}}'></image>
+            <text class='timetable_view_view_text'>{{item.name}}</text>
+          </view>
+        </view>
+      </view> -->
+
+    </view>
+
+    <!-- <view class='space_view' />
+    <button class='footer_button' hover-class='btn_hover' bindtap='submit'>预 约</button> -->
+
+  </view>
+</scroll-view>

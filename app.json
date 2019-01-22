@@ -1,0 +1,72 @@
+{
+  "pages": [
+    "pages/main/homepage",
+    "pages/main/service",
+    "pages/main/my",
+    "pages/main/servicedetail",
+    "pages/main/teacherintroduction",
+    "pages/main/personalinformation",
+    "pages/main/collection",
+    "pages/main/appointment",
+    "pages/main/purchase",
+    "pages/main/evaluation",
+    "pages/main/membershipupgrade",
+    "pages/main/memberdetail",
+    "pages/main/systemnotification",
+    "pages/main/aboutus",
+    "pages/main/webview",
+    "pages/main/professionalclassification",
+    "pages/main/professionalclassificationnext",
+    "pages/main/searchuniversity",
+    "pages/main/universityinformation",
+    "pages/main/universitydetail",
+    "pages/main/schoolprofessionalscore",
+    "pages/main/servicedetailtwo",
+    "pages/main/servicedetailthree",
+    "pages/main/servicedetailfour",
+    "pages/main/servicedetailfive",
+    "pages/main/servicedetailsix",
+    "pages/main/servicedetailseven",
+    "pages/main/bindingwechat",
+    "pages/main/bindingphonenum",
+    "pages/main/evaluationlist",
+    "pages/main/experts",
+    "pages/main/productfeatures"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "颐宗志愿",
+    "navigationBarTextStyle": "black"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1F3773",
+    "backgroundColor": "#fff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "pages/resources/hp_selected.png",
+        "iconPath": "pages/resources/hp_not_selected.png",
+        "pagePath": "pages/main/homepage",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "pages/resources/service_selected.png",
+        "iconPath": "pages/resources/service_not_selected.png",
+        "pagePath": "pages/main/service",
+        "text": "服务"
+      },
+      {
+        "selectedIconPath": "pages/resources/my_selected.png",
+        "iconPath": "pages/resources/my_not_selected.png",
+        "pagePath": "pages/main/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

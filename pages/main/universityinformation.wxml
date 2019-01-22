@@ -1,0 +1,39 @@
+<view class='space_height_two_view'></view>
+<view class='parent'>
+
+  <view wx:for="{{data}}">
+    <view class='content'>
+
+      <view class='item_view' data-id='{{item.college_id}}' bindtap='itemClick'>
+        <view>
+          <image class='item_img' src="https://s.yizongceping.com/school/icon/img/{{item.img_url}}" mode='scaleToFill'></image>
+        </view>
+
+        <view class='item_view_one'>
+          <text class='item_title'>{{item.college}}</text>
+
+          <!-- <view class='item_view_view_one' wx:if='{{item.major!=null}}'>
+            <text class='item_prompt_text'>专业名称：</text>
+            <text class='item_text'>{{item.major}}</text>
+          </view> -->
+
+          <view class='item_view_view_one'>
+            <text class='item_prompt_text'>所属类别：</text>
+            <text class='item_text' wx:if='{{item.college_type!=null}}'>{{item.college_type}}</text>
+            <text class='item_text' wx:elif='{{item.college_type==null}}'>暂无</text>
+          </view>
+
+          <!-- <view class='item_view_view_one'>
+            <text class='item_prompt_text'>学校地址：</text>
+            <text class='item_text'>暂无地址</text>
+          </view> -->
+        </view>
+      </view>
+
+      <view class='view_bg' />
+
+    </view>
+  </view>
+  <text class='prompt_text' style='display:{{prompt_display}};'>暂无数据</text>
+
+</view>
